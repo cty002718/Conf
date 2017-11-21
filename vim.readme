@@ -1,0 +1,23 @@
+tips:
+    iconv 轉編碼
+    dos2unix, unix2dos 轉換行字元
+    iconv -f utf8 -t big5 vi.utf8 | iconv -f big5 -t gb2312 | iconv -f gb2312 -t utf8 -o vi.gb.utf8 繁體轉簡體
+    :files 列出 vim 開啟的所有檔案
+    :n, :N 編輯下/上一個檔案
+    v, V, [Crtl]+v 不同的選擇方式
+    y, d, p 複製, 刪除, 貼上
+    0, $ 移到行頭/行尾
+    gg, G 移到檔案最前一行/最後一行
+    /, ? 向後搜尋/向前搜尋
+    n 重複前一個搜尋的動作
+    :1,$s/word1/word2/g 從第一列到最後一列尋找 word1 字串，並將該字串取代為 word2
+    :1,$s/word1/word2/gc 從第一列到最後一列尋找 word1 字串，並將該字串取代為 word2(有確認)
+    x, X 向後/向前刪除一個字元
+    dd 刪除游標的那一整列
+    yy 複製游標的那一整列
+    u 復原前一個動作
+    [Ctrl]+r 重做上一個動作
+    . 重複上一個動作
+
+about .vimrc:
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
