@@ -72,12 +72,26 @@ set ruler
 
 "自動備份檔案
 "set backup
+"
+
+map <F1> :call Compile()<CR><CR>
+fun! Compile()
+    exec "w"
+    if &filetype == 'cpp'
+        exec "!g++ % -o %<"
+    elseif &filetype == 'c'
+        exec "!gcc % -o %<"
+    endif
+endfunc
+
 
 map <F5> :call CompileRun()<CR>
 fun! CompileRun()
     exec "w"
     if &filetype == 'cpp'
         exec "!g++ % -o %< && ./%<"
+    elseif &filetype == 'c'
+        exec "!gcc % -o %< && ./%<"
     elseif &filetype == 'python'
         exec "!python3 %"
     endif
