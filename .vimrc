@@ -74,7 +74,7 @@ set ruler
 "set backup
 "
 
-map <F1> :call Compile()<CR><CR>
+map <F1> :call Compile()<CR>
 fun! Compile()
     exec "w"
     if &filetype == 'cpp'
@@ -111,4 +111,5 @@ endfunc
 let g:indentLine_enabled = 1
 
 colorscheme molokai
+
 
