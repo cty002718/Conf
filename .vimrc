@@ -37,6 +37,8 @@ filetype plugin indent on    " required
 
 "以下為通用設定
 
+set backspace=2
+
 "顯示行號
 set nu
 
